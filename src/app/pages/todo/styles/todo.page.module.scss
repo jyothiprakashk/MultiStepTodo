@@ -1,0 +1,89 @@
+$small: 300px;
+$medium: 900px;
+
+.todo {
+  width: 60%;
+  height: 100%;
+  overflow: auto;
+  margin: 40px 0px;
+
+  .addTask {
+    margin: 20px 0px;
+  }
+
+  .list {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 20px 0px;
+    background-color: #f9f9f9;
+
+    .task {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      color: black;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .attachmentWrapper {
+        display: flex;
+        gap: 6px;
+        flex-flow: wrap;
+        font-size: 13px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        .attachmentName {
+          background: #d8dce5;
+          padding: 2px 4px;
+          border-radius: 4px;
+          white-space: nowrap;
+          max-width: 24%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .subTaskContainer {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .svgIcons {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .inputWrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .addSubtask {
+        margin-left: 20px;
+      }
+
+      .taskContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .labelContainer {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $small) and (max-width: $medium) {
+  .todo {
+    width: 96%;
+  }
+}
